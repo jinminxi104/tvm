@@ -198,6 +198,9 @@ set(USE_SORT ON)
 # Whether use MKL-DNN (DNNL) codegen
 set(USE_DNNL_CODEGEN OFF)
 
+# Whether use MKL-DNN (DNNL) codegen
+set(USE_MYNN_CODEGEN ON)
+
 # Whether to use Arm Compute Library (ACL) codegen
 # We provide 2 separate flags since we cannot build the ACL runtime on x86.
 # This is useful for cases where you want to cross-compile a relay graph

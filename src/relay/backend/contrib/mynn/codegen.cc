@@ -253,7 +253,7 @@ class CodegenMYNN : public MemoizedExprTranslator<std::vector<Output>>, public C
 
     if (pattern_name == "mynn.conv2d_bias") {
       const auto* conv_call =
-          GetRootCall(callee->body.as<CallNode>(), 2, {"nn.conv2d", "add"});
+          GetRootCall(callee->body.as<CallNode>(), 1, {"nn.conv2d", "add"});
       return GenerateBody(conv_call, "mynn_fused_conv2d_bias", GetArgumentNames(caller),
                           Conv2d(conv_call));
     }

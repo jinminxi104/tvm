@@ -61,6 +61,14 @@ TVM_DLL Pass CreateFunctionPass(
     const runtime::TypedPackedFunc<Function(Function, IRModule, PassContext)>& pass_func,
     int opt_level, String name, tvm::Array<String> required);
 
+/*! \brief Remove add layer
+ *
+ * \param None
+ *
+ * \return the pass.
+ */   
+TVM_DLL Pass RemoveAdd();
+    
 /*! \brief Remove expressions which does not effect the program result.
  *
  * It will remove let bindings which are not referenced,

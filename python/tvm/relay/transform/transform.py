@@ -267,6 +267,15 @@ def FoldConstant():
     """
     return _ffi_api.FoldConstant()
 
+def RemoveAdd():
+    """Remove AddLayer
+
+    Returns
+    -------
+    ret : tvm.transform.Pass
+        The registered pass for removing add layer.
+    """
+    return _ffi_api.RemoveAdd()
 
 def FuseOps(fuse_opt_level=-1):
     """Fuse operators in an expr to a larger operator according to some rules.
